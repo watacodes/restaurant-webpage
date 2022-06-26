@@ -1,14 +1,32 @@
+@font-face {
+    font-family: "Famosa-heavy";
+    src: url(./fonts/Famosa-HeavyDemo.otf)
+}
+
+@font-face {
+    font-family: "MonicasSalonNF";
+    src: url(./fonts/MonicasSalonNF.ttf)
+}
+
+@font-face {
+    font-family: "MonicasSalonShadowNF";
+    src: url(./fonts/MonicasSalonShadowNF.ttf)
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    --main-font-color: #0D0D25;
+    --main-font-color: #0a0a48;
     --orange: #FF8800;
+    font-family: "Famosa-heavy" "MonicasSalonNF" "MonicasSalonShadowNF" sans-serif;
 }
+
+
 
 body {
     color: var(--main-font-color);
-    width: 100vw;
+    max-width: 100vw;
 }
 
 .page1 {
@@ -16,10 +34,14 @@ body {
     width: 100vw;
     background: url(./images/main-bg1.jpg) right no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-header {
     position: absolute;
+    top: 0;
+    left: 0;
     height: 60px;
     width: 100%;
 }
@@ -29,32 +51,382 @@ body {
     height: 60px;
 }
 
+.icon {
+    width: 20px;
+    height: 20px;
+}
 .header-list {
     display: flex;
     align-items: center;
-    background: red;
+    justify-content: flex-end;
     width: 100vw;
 
 }
 
 .header-list li {
     list-style-type: none;
-    justify-content: space-between;
-
 }
 
 .header__links {
+    font-family: sans-serif;
+    font-weight: 600;
     margin: 20px;
     text-decoration: none;
     color: var(--main-font-color);
 }
 
+.header-icon2 {
+    margin-right: 80px;
+}
+
+.main1-wrapper {
+    width: 50vw;
+    padding: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .main1 {
-    height: 90%;
+    position: absolute;
+    top: 60px;
+    height: 50%;
     width: 100%;
 }
 
-img {
-    width: 5%;
-    height: 5%;
+.main1__heading {
+    font-size: 3.5rem;
+    font-family: "Famosa-heavy";
 }
+
+.location-searchbar {
+    display: flex;
+    justify-content: stretch;
+    margin: 10px 0 20px 0;
+}
+
+.input-box {
+    background: white url(./images/searchicon.png) left no-repeat;
+    background-size: 16px;
+    padding: 10px;
+    border: 0.5px solid grey;
+    border-right-style: none;
+    border-radius: 3px;
+    width: 400px;
+}
+
+.dropdown {
+    background: orange;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.social-links {
+    width: 300px;
+    height: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--main-font-color);
+    font-weight: 600;
+}
+
+.viewcounts {
+    padding: 0 40px 0 10px;
+    font-family: sans-serif;
+}
+
+.page2 {
+    background: url(./images/main-bg2.jpg) no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.page2-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    width: 40%;
+    height: 50vh;
+    margin-right: 150px;
+}
+
+.orange {
+    color: var(--orange);
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.page2__heading {
+    font-size: 3.5rem;
+}
+
+.page2__text {
+    color: var(--main-font-color);
+    padding-bottom: 20px;
+}
+
+.discover-btn-container {
+    width: 180px;
+    height: 40px;
+    background: var(--orange);
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+/* Need to add new image for arrow button */
+
+.discover-btn {
+    width: 150px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-family: sans-serif;
+    padding: 0 15px;
+}
+
+.discover-arrow {
+    background: rgba(255, 136, 0, .8);
+}
+
+.page3 {
+    background: whitesmoke;
+    width: 100vw;
+    height: 80vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.page3__heading {
+    font-size: 3rem;
+    font-family: "Famosa-heavy";
+    padding: 30px 0;
+
+}
+
+.page3-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    width: 90vw;
+    height: 80vh;
+}
+
+.list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.list-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+
+ul { 
+    list-style-type: none;
+}
+
+.cuisine__links {
+    padding: 5px 30px;
+    text-decoration: none;
+    width: 150px;
+    color: var(--main-font-color);
+    font-family: sans-serif;
+    font-size: 1.25rem;
+}
+
+#orange {
+    color: #FF8800;
+}
+
+.image-container {
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.food-pics {
+    height: 300px;
+    width: 200px;
+    margin: 30px 30px 10px 30px;
+}
+
+.page4 {
+    width: 100vw;
+    height: 100vh;
+    background: url(./images/main-bg3.jpg) no-repeat;
+    background-size: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.page4-wrapper {
+    width: 90vw;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.openings-container {
+    width: 80vw;
+    height: 30%;
+    margin: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page4__heading {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.phone-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.page4-text {
+    font-family: sans-serif;
+    font-size: 1.25rem;
+    margin: 20px 0;
+}
+
+.phonenumber {
+    font-family: sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.openings {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-align: start;
+}
+
+.openings__time {
+    font-family: "Famosa-heavy";
+    font-size: 1.2rem;
+    padding: 20px 0;
+}
+
+.video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85vw;
+    height: 50%;
+}
+
+.video {
+    width: 60%;
+    height: 100%;
+}
+
+.page5 {
+    background: white;
+    text-align: center;
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: hsl(0, 0%, 90%);
+}
+
+.page5-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    height: 80%;
+
+}
+
+.heading-wrapper {
+    width: 100%;
+    height: 30%;
+}
+
+.review-wrapper {
+    width: 100%;
+    height: 70%;
+}
+
+.page5__heading {
+    font-size: 3rem;
+    margin-top: 40px;
+}
+
+.testimonials {
+    margin: 100px;
+    width: 3rem;
+    height: 3rem;
+}
+.customer {
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+}
+
+.customer-name {
+    font-family: "MonicasSalonNF";
+    font-size: 1.7rem;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.star-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.customer-occupation {
+    margin-bottom: -20px;
+}
+
+.stars {
+    width: 80px;
+    height: 80px;
+}
+
+.review {
+    font-style: italic;
+    font-size: 1.25rem;
+}
+
+
+
+
+
+
+
+
