@@ -22,7 +22,18 @@
     font-family: "Famosa-heavy" "MonicasSalonNF" "MonicasSalonShadowNF" sans-serif;
 }
 
+.nav-mobile-button,
+.header__heading {
+    display: none;
+}
 
+.bar {
+    width: 18px;
+    height: 2px;
+    padding: 1px;
+    background: var(--main-font-color);
+    margin-bottom: 2px;
+}
 
 body {
     color: var(--main-font-color);
@@ -423,9 +434,141 @@ ul {
     font-size: 1.25rem;
 }
 
+/* Mobile Media Queries */
+
+@media screen and (max-width: 480px) {
+
+    body {
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav-mobile-button {
+        display: inline-block;
+    }
+
+    /* .page1 {
+        background: url(./images/main-bg5.jpg) no-repeat;
+        background-size: 100%;
+    } */
+
+    .header-list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 8px 16px;
+    }
+
+    .header__links {
+        display: none;
+    }
+
+    .header__heading {
+        display: inline-block;
+        font-size: 1.5rem;
+        color: var(--main-font-color);
+        padding-left: 30px;
+    }
+
+    .page1 {
+        width: 100vw;
+    }
+
+    .main1-wrapper {
+        padding: 20px;
+        height: 80%;
+    }
+
+    .main1__heading {
+        font-size: 3.5rem;
+    }
+
+    .location-searchbar {
+        width: 60vw;
+    }
+
+    .page2 {
+        display: none;
+    }
+
+    .page2-wrapper {
+        margin: 0;
+        height: 90vh;
+    }
 
 
+    .page3 {
+        width: 100vw;
+        height: 180vh;
+    }
 
+    .page3__heading {
+        padding: 20px 0;
+    }
+
+    .order {
+        margin: 20px 0;
+    }
+
+    .list-parent {
+        margin-bottom: 10px;
+    }
+
+    .page3-wrapper {
+        padding: 0;
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .cuisine__links {
+        padding: 10px;
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        height: 90%;
+        width: 90vw;
+        justify-content: space-around;
+    }
+
+    .mobile {
+        display: none;
+    }
+    
+    .food-pics {
+        position: relative;
+        bottom: 0;
+        width: 70%;
+        height: 30%;
+        margin: 0;
+    }
+
+    .list-container {
+        width: 100%;
+    }
+
+    .page4 {
+        padding: 0;
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .page4-wrapper {
+        height: 100%;
+        margin-top: 20px;
+    }
+
+    .page5 {
+        height: 100vh;
+    }
+}
 
 
 
